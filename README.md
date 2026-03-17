@@ -1,0 +1,121 @@
+# OBIRTUS Launcher
+
+Launcher de eventos de Minecraft con instalacion automatica de mods, Discord OAuth y sistema de skins.
+
+## Estado
+- En construccion.
+
+## Caracteristicas
+- Seleccion de eventos y lanzamiento con un clic.
+- Instalacion de mods por evento (Forge/Fabric).
+- Auto-conexion al servidor.
+- Discord login y notificaciones.
+- Skins por mod (CustomSkinLoader) o plugin del servidor.
+- Dashboard web para crear y aprobar eventos.
+- Auto-update con GitHub Releases (electron-updater).
+
+## Requisitos
+- Windows 10/11 (soportado por el build actual).
+- Java 17 o superior recomendado.
+- Discord Desktop abierto para Rich Presence.
+
+## Estructura del repo
+```
+.
+├─ src/                 UI del launcher (Electron renderer)
+├─ main.js              Proceso principal de Electron
+├─ events/              Eventos locales (JSON)
+├─ assets/              Assets y mods incluidos
+├─ backend/             API + Dashboard web
+└─ dist/                Salida de electron-builder
+```
+
+## Instalacion (Launcher)
+```
+npm install
+npm start
+```
+
+## Build (Electron)
+```
+npm run build
+```
+
+Para publicar en GitHub Releases (auto-update):
+```
+$env:GH_TOKEN="TU_TOKEN"
+npm run build -- --publish=always
+```
+
+## Auto-update (electron-updater)
+- El auto-update solo funciona desde la app instalada (no desde `npm start`).
+- Requiere un release publicado en GitHub con los assets generados.
+- El repo esta configurado en `package.json` dentro de `build.publish`.
+
+## Logs
+- Ruta: `%APPDATA%\.obirtus\logs\launcher.log`
+- Guarda errores de Minecraft, RPC y descargas.
+
+## Eventos locales (JSON)
+Ubicacion: `events/*.json`
+
+Ejemplo:
+```json
+{
+  "event_name": "Survival Season 1",
+  "description": "Explora el mundo con mods",
+  "version": "1.20.1",
+  "loader": "fabric",
+  "mods": [
+    "https://cdn.modrinth.com/.../mod.jar"
+  ],
+  "server_ip": "play.obirtus.com:25565",
+  "banner_url": "https://...",
+  "event_time": "2026-03-20T00:00:00.000Z",
+  "skinmod_required": true
+}
+```
+
+Campos opcionales:
+- `skinmod_required`: fuerza aviso de CustomSkinLoader en eventos Forge.
+- `banner_url`: imagen de portada.
+- `event_time`: fecha/hora del evento.
+
+## Skins
+El launcher solo soporta skins con:
+- Mod cliente (CustomSkinLoader), o
+- Plugin en el servidor.
+
+Si usas CustomSkinLoader en Forge, el launcher puede requerirlo por evento.
+
+Recomendado:
+- Ely.by Server Skins System: https://ely.by/server-skins-system
+- Descargas Ely.by: https://ely.by/load
+
+## CustomSkinLoader (cliente)
+Ruta esperada:
+```
+assets/skin-mods/customskinloader.jar
+```
+
+## Backend y Dashboard
+El backend vive en `backend/` y trae su propio README:
+```
+backend/README.md
+```
+
+Incluye:
+- Login con Discord
+- Whitelist
+- Creacion y aprobacion de eventos
+
+## Troubleshooting
+- Forge abre en Vanilla: revisa que el evento tenga `loader` correcto.
+- RPC no aparece: activa "Mostrar actividad actual" en Discord.
+- Mods no cargan: verifica URLs directas a `.jar`.
+
+## Roadmap (idea)
+- Soporte para NeoForge/Quilt.
+- Descarga automatica de CustomSkinLoader desde un CDN propio.
+- Vista de logs dentro del launcher.
+
