@@ -1,11 +1,11 @@
 <div align="center">
   <a href="https://obirtus-launcher.vercel.app/">
-    <img src="assets/banner.png" alt="Obirtus Launcher Banner" width="100%" />
+    <img src="https://raw.githubusercontent.com/Togamer0109q/Launcher-Obirtus/refs/heads/main/banner.png" alt="Obirtus Launcher Banner" width="100%" />
   </a>
   <br />
   <br />
   <a href="https://obirtus-launcher.vercel.app/">
-    <img src="assets/icon.png" alt="Obirtus Launcher Logo" width="120" height="120" />
+    <img src="https://raw.githubusercontent.com/Togamer0109q/Launcher-Obirtus/refs/heads/main/icon.png" alt="Obirtus Launcher Logo" width="120" height="120" />
   </a>
 
   # OBIRTUS Launcher
@@ -38,9 +38,6 @@ Para disfrutar de la mejor experiencia posible, asegúrate de cumplir con los si
 
 - **Sistema Operativo:** Windows 10 o Windows 11. *(Soporte actual de la build)*.
 - **Entorno de Ejecución:** Java 17 o superior (Recomendado).
-- **Discord:** Discord Desktop debe estar en ejecución para aprovechar el inicio de sesión OAuth y el Rich Presence.
-
----
 
 ##  Sistema de Skins
 
@@ -74,6 +71,7 @@ Continuamente mejoramos el launcher para llevarlo al siguiente nivel:
 - [ ] 🟢 **Soporte para NeoForge y Quilt** como nuevos modloaders.
 - [ ] ☁️ **Descarga automática de CustomSkinLoader** directamente desde nuestro CDN privado.
 - [ ] 📋 **Consola Integrada:** Vista en vivo de los logs internos de Minecraft y del Launcher sin salir de la app.
+- [ ] 💻 **Inicio de minecraft** Botones directos para marketplace, servidores recomendados y mucho mas sin salir de minecraft.
 
 ---
 
@@ -81,3 +79,4 @@ Continuamente mejoramos el launcher para llevarlo al siguiente nivel:
   <b>Desarrollado con ❤️ para la comunidad</b><br>
   <a href="https://obirtus-launcher.vercel.app/">Visita nuestro sitio oficial</a>
 </div>
+
