@@ -1,59 +1,83 @@
-# OBIRTUS Launcher
+<div align="center">
+  <a href="https://obirtus-launcher.vercel.app/">
+    <img src="assets/banner.png" alt="Obirtus Launcher Banner" width="100%" />
+  </a>
+  <br />
+  <br />
+  <a href="https://obirtus-launcher.vercel.app/">
+    <img src="assets/icon.png" alt="Obirtus Launcher Logo" width="120" height="120" />
+  </a>
 
-Launcher de eventos de Minecraft con instalacion automatica de mods, Discord OAuth y sistema de skins.
+  # OBIRTUS Launcher
 
-## Estado
-- En construccion.
+  **Launcher de eventos de Minecraft moderno, rápido y personalizable** <br> con instalación automática de mods, Discord OAuth y un robusto sistema de skins.
 
-## Caracteristicas
-- Seleccion de eventos y lanzamiento con un clic.
-- Instalacion de mods por evento (Forge/Fabric).
-- Auto-conexion al servidor.
-- Discord login y notificaciones.
-- Skins por mod (CustomSkinLoader) o plugin del servidor.
-- Dashboard web para crear y aprobar eventos.
-- Auto-update con GitHub Releases (electron-updater).
+  [![Website](https://img.shields.io/badge/Website-obirtus--launcher.vercel.app-00e5ff?style=for-the-badge&logo=vercel)](https://obirtus-launcher.vercel.app/)
+  [![Estado](https://img.shields.io/badge/Estado-En_Construcción-ff8c00?style=for-the-badge)](#)
+  [![Plataforma](https://img.shields.io/badge/Plataforma-Windows_10%20%7C%2011-0078d7?style=for-the-badge&logo=windows)](#)
 
-## Requisitos
-- Windows 10/11 (soportado por el build actual).
-- Java 17 o superior recomendado.
-- Discord Desktop abierto para Rich Presence.
+</div>
 
-## Skins
-El launcher solo soporta skins con:
-- Mod cliente (CustomSkinLoader), o
-- Plugin en el servidor.
+<hr />
 
-Si usas CustomSkinLoader en Forge, el launcher puede requerirlo por evento.
+## ✨ Características Principales
 
-Recomendado:
-- Ely.by Server Skins System: https://ely.by/server-skins-system
-- Descargas Ely.by: https://ely.by/load
+-  **Selección de Eventos con Un Clic:** Explora los eventos disponibles e inicia tu instancia al instante sin configuraciones manuales.
+-  **Instalación Automática de Mods:** Descarga e instala colecciones de mods (Forge/Fabric) por evento en tiempo real.
+-  **Auto-Conexión al Servidor:** Olvídate de añadir la IP manualmente; entra directo a jugar.
+-  **Integración con Discord:** Inicia sesión de manera segura con Discord OAuth y muestra tu actividad con Discord Rich Presence (RPC).
+-  **Sistema Avanzado de Skins:** Compatible con skins por mod (`CustomSkinLoader`) o mediante plugins del servidor (Soporte nativo para Ely.by).
+-  **Dashboard Web Administrativo:** Panel de control web para crear eventos, aprobar solicitudes y gestionar la whitelist.
+-  **Auto-Updates Inclusivos:** Sistema de actualización inteligente basado en GitHub Releases mediante `electron-updater`.
 
-## CustomSkinLoader (cliente)
-Ruta esperada:
-```
-assets/skin-mods/customskinloader.jar
-```
+---
 
-## Backend y Dashboard
-El backend vive en `backend/` y trae su propio README:
-```
-backend/README.md
-```
+## 💻 Requisitos del Sistema
 
-Incluye:
-- Login con Discord
-- Whitelist
-- Creacion y aprobacion de eventos
+Para disfrutar de la mejor experiencia posible, asegúrate de cumplir con los siguientes requisitos:
 
-## Troubleshooting
-- Forge abre en Vanilla: revisa que el evento tenga `loader` correcto.
-- RPC no aparece: activa "Mostrar actividad actual" en Discord.
-- Mods no cargan: verifica URLs directas a `.jar`.
+- **Sistema Operativo:** Windows 10 o Windows 11. *(Soporte actual de la build)*.
+- **Entorno de Ejecución:** Java 17 o superior (Recomendado).
+- **Discord:** Discord Desktop debe estar en ejecución para aprovechar el inicio de sesión OAuth y el Rich Presence.
 
-## Roadmap (idea)
-- Soporte para NeoForge/Quilt.
-- Descarga automatica de CustomSkinLoader desde un CDN propio.
-- Vista de logs dentro del launcher.
+---
 
+##  Sistema de Skins
+
+El launcher está optimizado para funcionar con los siguientes métodos de visualización de skins:
+
+1. **Mod de Cliente:** Mediante `CustomSkinLoader`.
+2. **Plugin del Servidor:** Gestionado internamente en tu servidor (ej. SkinsRestorer).
+
+> [!TIP]
+> **Para usuarios de Forge:** Si utilizas `CustomSkinLoader`, el launcher puede exigirlo de manera automática al unirse a un evento para garantizar que la experiencia sea unificada.
+
+###  Recomendaciones (Ely.by)
+- Sistema de Skins para Servidores: [Ely.by Server Skins System](https://ely.by/server-skins-system)
+- Galería y Descargas: [Ely.by Load](https://ely.by/load)
+
+## 🛠️ Troubleshooting (Solución de Problemas)
+
+¿Tienes problemas con el launcher? Aquí tienes las soluciones más frecuentes:
+
+- **¿Forge/Fabric se abre en su versión Vanilla (sin mods)?**
+  *Solución:* Revisa en tu Dashboard Web que el evento tenga el valor `loader` configurado correctamente (ej. `forge`, `fabric`).
+- **¿Los mods de un evento no cargan o fallan al descargar?**
+  *Solución:* pidele al creador de el evento que las URLs de descarga sean enlaces **directos** a los archivos `.jar` ya que si no es asi no funciona.
+
+---
+
+## 🚀 Roadmap (Próximamente)
+
+Continuamente mejoramos el launcher para llevarlo al siguiente nivel:
+
+- [ ] 🟢 **Soporte para NeoForge y Quilt** como nuevos modloaders.
+- [ ] ☁️ **Descarga automática de CustomSkinLoader** directamente desde nuestro CDN privado.
+- [ ] 📋 **Consola Integrada:** Vista en vivo de los logs internos de Minecraft y del Launcher sin salir de la app.
+
+---
+
+<div align="center">
+  <b>Desarrollado con ❤️ para la comunidad</b><br>
+  <a href="https://obirtus-launcher.vercel.app/">Visita nuestro sitio oficial</a>
+</div>
